@@ -1,88 +1,21 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Biografie Znajomych</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-      margin: 0;
-      padding: 2em;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 1em;
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2em;
-    }
-    .card {
-      background-color: white;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
-      width: 280px;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1em;
-    }
-    .card-content h2 {
-      margin-top: 0;
-      font-size: 1.5em;
-      color: #555;
-    }
-    .card-content p {
-      margin: 0.3em 0;
-      color: #666;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Informacje o Lekach</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Ekipe the best</h1>
-  <div class="container">
 
-    <div class="card">
-      <img src="a01183db-3fcf-4c16-acfe-f78ad74bf02c.jpeg" alt="Marcin Piotrowski">
-      <div class="card-content">
-        <h2>Marcin Piotrowski</h2>
-        <p>Urodzony: 27.12.2006</p>
-        <p>Wysoki, chudy, modnie ubrany. Lubi opium. jebie trzaskowskiego</p>
-      </div>
-    </div>
+  <h1>Leki</h1>
+  <input type="text" id="pole-wyszukiwania" placeholder="Wpisz nazwę leku..." />
+  <button onclick="szukajLeku()">Szukaj</button>
+  <button onclick="resetuj()">Resetuj</button>
 
-    <div class="card">
-      <img src="d316e319-f649-4e97-9165-765df6b93b0b.jpeg" alt="Kinga">
-      <div class="card-content">
-        <h2>Kinga</h2>
-        <p>Urodzona: 21.12.2008</p>
-        <p>Niska, zadziorna tapeciara. Robi paznokcie 💅</p>
-      </div>
-    </div>
+  <div id="wynik"></div>
 
-    <div class="card">
-      <img src="2c7b2fb9-d704-41c5-935f-e5d356251bf4.jpeg" alt="Adam Taranek">
-      <div class="card-content">
-        <h2>Adam Taranek</h2>
-        <p>Urodzony: 18.10.2010</p>
-        <p>Fighter, przystojniak, ma laskę 💪🔥 pali żydów</p>
-      </div>
-    </div>
-
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
 
