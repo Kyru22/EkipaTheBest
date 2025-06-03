@@ -74,7 +74,7 @@ const leki = {
 
   
   function szukajLeku() {
-    const nazwaLeku = document.getElementById("pole-wyszukiwania").value.toLowerCase();
+    const nazwaLeku = document.getElementById("pole-wyszukiwania").value.toLowerCase(),trim();
     const wypiszWynik = document.getElementById("wynik");
   
     const lek = leki[nazwaLeku];
